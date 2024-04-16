@@ -1,0 +1,41 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    
+    
+}
+.contenedor{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    
+}
+.formulario{
+    width: 800px;
+    height: 1000px;
+    margin: 50px auto;
+    color: #ffffff;
+    background-image: url(imagene/desktop-wallpaper-iron-man-iphone-best-iron-man-iphone-and-on-chat-11-iron-man.jpg);
+    
+}
+
+.titulo{
+    margin: 0 auto;
+}
+.titulo h1{
+    font-family: "Jersey 10 Charted", sans-serif;
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 80px;
+}
+.mb-3{
+    margin-top: 15px;
+}
+.btn{
+    margin: 0 auto;
+}
+
+  
