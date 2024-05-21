@@ -52,6 +52,48 @@ console.log(estudiantes);
 
 //Recorriendo un arreglo
 
+//Referencia a la base o componente padre
+let fila= document.getElementById("fila");
+
+//Recorro el arreglo de datos y comienzo a generar etiquetas desde JS(traversing)
 estudiantes.forEach(function(estudiante){
-    console.log(estudiante.nombre)
-})
+    //Solo puedo crear etiquetas reales de html
+    let columna=document.createElement("div");
+    columna.classList.add("col")
+
+    let tarjeta=document.createElement("div");
+    tarjeta.classList.add("card","h-100","shadow");
+
+    let nombreDelEstudiante=document.createElement("h3");
+    nombreDelEstudiante.classList.add("text-center","fuenteNombre");
+    nombreDelEstudiante.textContent=estudiante.nombre;
+
+    let edad=document.createElement("h4");
+    edad.classList.add("text-center");
+    edad.textContent="edad: "+estudiante.edad;
+
+    let cuota=document.createElement("h4");
+    cuota.classList.add("text-center","fuente");
+    cuota.textContent="cuota: "+estudiante.cuotasPendientes;
+
+    let saldoDeuda=document.createElement("h4")
+    saldoDeuda.classList.add("text-center");
+    saldoDeuda.textContent="Saldo deuda: "+estudiante.saldoDeuda;
+
+    let logo= document.createElement("img")
+    logo.classList.add("img-fluid","tamaño")
+    logo.src="../imagenes/logo.png";
+    
+
+    //asocio los elementos creados al componente padre, siempre del mas interno al mas externo
+    tarjeta.appendChild(nombreDelEstudiante);
+    tarjeta.appendChild(edad);
+    tarjeta.appendChild(cuota);
+    tarjeta.appendChild(saldoDeuda);
+    tarjeta.appendChild(logo)
+    columna.appendChild(tarjeta);
+
+    fila.appendChild(columna);
+
+    
+});
